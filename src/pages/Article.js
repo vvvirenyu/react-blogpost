@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import articleContent from './Article-content'
-import ArticleList from './ArticleList';
+import ArticleListComponent from '../components/ArticleListComponent';
 
 const Article = ({ match }) => {
     const name = match.params.name;
@@ -13,7 +13,7 @@ const Article = ({ match }) => {
             <h1> {article.title} </h1>
             {article.content}
             <h3> Other Articles: </h3>
-            <ArticleList articles={otherArticle}/>
+            <ArticleListComponent articles={otherArticle}/>
         </>
     );
 }
